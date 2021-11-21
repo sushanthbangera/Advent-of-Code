@@ -34,7 +34,6 @@ public class PassportValidifierV2 {
     private static Set<String> eyeColors = new HashSet<>(Arrays.asList("amb", "blu", "brn", "gry", "grn", "hzl", "oth"));
 
     public static void main(String[] args) {
-        List<String> validKeys = Arrays.asList("byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid", "cid");
         String inputPath = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2020\\Day4\\input1";
         List<String> input1 = FileUtils.readInputFile(inputPath);
         System.out.println(getValidPassportCount(input1));
@@ -47,7 +46,7 @@ public class PassportValidifierV2 {
     public static int getValidPassportCount(List<String> inputList) {
         int validCount = 0;
         StringBuilder passportDetails = new StringBuilder();
-        boolean isValid = false;
+        boolean isValid;
         for (String line : inputList) {
             if (line.equals("")) {
                 isValid = checkValid(passportDetails.toString());
@@ -69,7 +68,7 @@ public class PassportValidifierV2 {
         boolean isCID = false;
         for (String keyPair : keyValues) {
             String key = keyPair.substring(0, keyPair.indexOf(":"));
-            String value = keyPair.substring(keyPair.indexOf(":") + 1, keyPair.length()).trim();
+            String value = keyPair.substring(keyPair.indexOf(":") + 1).trim();
             if (validKeys.contains(key) && isValidKey(key, value)) {
                 count++;
                 if (key.equals("cid")) {
