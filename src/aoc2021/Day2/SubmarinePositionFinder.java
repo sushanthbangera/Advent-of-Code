@@ -64,12 +64,16 @@ public class SubmarinePositionFinder {
 
     public static void main(String[] args) {
         String inputPath = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\Day2\\input1";
-        List<String> input1 = FileUtils.readInputFile(inputPath);
-        System.out.println(findSubmarinePosition2(input1));
+        List<String> input = FileUtils.readInputFile(inputPath);
+        System.out.println(findSubmarinePosition2(input));
 
         inputPath = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\Day2\\input2";
-        List<String> input2 = FileUtils.readInputFile(inputPath);
-        System.out.println(findSubmarinePosition2(input2));
+        input = FileUtils.readInputFile(inputPath);
+        System.out.println(findSubmarinePosition2(input));
+
+        inputPath = "C:\\Users\\suba0521\\Downloads\\ashu.txt";
+        input = FileUtils.readInputFile(inputPath);
+        System.out.println(findSubmarinePosition2(input));
     }
 
     public static int findSubmarinePosition(List<String> input) {
