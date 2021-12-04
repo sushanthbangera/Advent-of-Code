@@ -24,11 +24,11 @@ public class GiantSquidLastWinner extends GiantSquid {
         List<String> input1 = FileUtils.readInputFile(inputPath1);
         List<String> input2 = FileUtils.readInputFile(inputPath2);
 
-        System.out.println(getSolutionTwo(input1));
-        System.out.println(getSolutionTwo(input2));
+        System.out.println(getFinalWinnerScore(input1));
+        System.out.println(getFinalWinnerScore(input2));
     }
 
-    public static int getSolutionTwo(List<String> input) {
+    public static int getFinalWinnerScore(List<String> input) {
         int result = 0;
         List<Integer> randoms = getRandoms(input);
         List<int[][]> allBoards = allBoards(input);
@@ -86,6 +86,5 @@ public class GiantSquidLastWinner extends GiantSquid {
         }
         return winnerBoards;
     }
-
 
 }

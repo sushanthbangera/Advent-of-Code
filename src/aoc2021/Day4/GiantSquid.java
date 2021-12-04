@@ -72,11 +72,11 @@ public class GiantSquid {
         List<String> input1 = FileUtils.readInputFile(inputPath1);
         List<String> input2 = FileUtils.readInputFile(inputPath2);
 
-        System.out.println(getSolutionOne(input1));
-        System.out.println(getSolutionOne(input2));
+        System.out.println(getWinnerScore(input1));
+        System.out.println(getWinnerScore(input2));
     }
 
-    public static int getSolutionOne(List<String> input) {
+    public static int getWinnerScore(List<String> input) {
         int result = 0;
         List<Integer> randoms = getRandoms(input);
         List<int[][]> allBoards = allBoards(input);
