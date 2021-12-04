@@ -1,6 +1,7 @@
 package aoc2021.Day2;
 
 import aoc2020.utils.FileUtils;
+import aoc2021.utils.StringUtils;
 
 import java.util.List;
 /*
@@ -58,40 +59,38 @@ forward 2 adds 2 to your horizontal position, a total of 15. Because your aim is
 After following these new instructions, you would have a horizontal position of 15 and a depth of 60. (Multiplying these produces 900.)
 
 Using this new interpretation of the commands, calculate the horizontal position and depth you would have after following the planned course. What do you get if you multiply your final horizontal position by your final depth?
-
+Your puzzle answer was 1759818555.
  */
 public class SubmarinePositionFinder {
 
+    protected static String inputPath1 = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\Day2\\input1";
+    protected static String inputPath2 = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\Day2\\input2";
+
     public static void main(String[] args) {
-        String inputPath = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\Day2\\input1";
-        List<String> input = FileUtils.readInputFile(inputPath);
+        List<String> input = FileUtils.readInputFile(inputPath1);
         System.out.println(findSubmarinePosition2(input));
 
-        inputPath = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\Day2\\input2";
-        input = FileUtils.readInputFile(inputPath);
-        System.out.println(findSubmarinePosition2(input));
-
-        inputPath = "C:\\Users\\suba0521\\Downloads\\ashu.txt";
-        input = FileUtils.readInputFile(inputPath);
+        input = FileUtils.readInputFile(inputPath2);
+        System.out.println(findSubmarinePosition(input));
         System.out.println(findSubmarinePosition2(input));
     }
 
     public static int findSubmarinePosition(List<String> input) {
-        int hp = 0;
-        int depth = 0;
+        int hp = 0, depth = 0;
 
         for (String in : input) {
-            String[] inArr = in.split("\\s+");
+            String[] inArr = StringUtils.split(in);
+            Integer movement = Integer.parseInt(inArr[1]);
 
             switch (inArr[0]) {
                 case "forward":
-                    hp += Integer.parseInt(inArr[1]);
+                    hp += movement;
                     break;
                 case "up":
-                    depth -= Integer.parseInt(inArr[1]);
+                    depth -= movement;
                     break;
                 case "down":
-                    depth += Integer.parseInt(inArr[1]);
+                    depth += movement;
                     break;
             }
         }
@@ -99,23 +98,21 @@ public class SubmarinePositionFinder {
     }
 
     public static int findSubmarinePosition2(List<String> input) {
-        int hp = 0;
-        int depth = 0;
-        int aim = 0;
+        int hp = 0, depth = 0, aim = 0;
 
         for (String in : input) {
-            String[] inArr = in.split("\\s+");
-
+            String[] inArr = StringUtils.split(in);
+            Integer movement = Integer.parseInt(inArr[1]);
             switch (inArr[0]) {
                 case "forward":
-                    hp += Integer.parseInt(inArr[1]);
-                    depth += (aim * Integer.parseInt(inArr[1]));
+                    hp += movement;
+                    depth += (aim * movement);
                     break;
                 case "up":
-                    aim -= Integer.parseInt(inArr[1]);
+                    aim -= movement;
                     break;
                 case "down":
-                    aim += Integer.parseInt(inArr[1]);
+                    aim += movement;
                     break;
             }
         }

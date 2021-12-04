@@ -39,16 +39,20 @@ To do this, count the number of times a depth measurement increases from the pre
 In this example, there are 7 measurements that are larger than the previous measurement.
 
 How many measurements are larger than the previous measurement?
+
+Your puzzle answer was 1752.
  */
 public class DepthIncreaseFinder {
 
+    private static String inputPath1 = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\Day1\\input1";
+    private static String inputPath2 = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\Day1\\input2";
+
     public static void main(String[] args) {
-        String inputPath = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\Day1\\input1";
-        List<String> input1 = FileUtils.readInputFile(inputPath);
+        List<String> input1 = FileUtils.readInputFile(inputPath1);
         System.out.println(getIncreasedWindowDepthCount(input1));
 
-        inputPath = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\Day1\\input2";
-        List<String> input2 = FileUtils.readInputFile(inputPath);
+        List<String> input2 = FileUtils.readInputFile(inputPath2);
+        System.out.println(getIncreasedDepthCount(input2));
         System.out.println(getIncreasedWindowDepthCount(input2));
     }
 
@@ -96,6 +100,8 @@ H: 792 (increased)
 In this example, there are 5 sums that are larger than the previous sum.
 
 Consider sums of a three-measurement sliding window. How many sums are larger than the previous sum?
+
+Your puzzle answer was 1781.
 */
     public static int getIncreasedWindowDepthCount(List<String> input) {
         List<Integer> depths = NumberUtils.convertToInt(input);

@@ -23,11 +23,9 @@ public class GiantSquidLastWinner extends GiantSquid {
     public static void main(String[] args) {
         List<String> input1 = FileUtils.readInputFile(inputPath1);
         List<String> input2 = FileUtils.readInputFile(inputPath2);
-        List<String> input3 = FileUtils.readInputFile(inputPath3);
 
         System.out.println(getSolutionTwo(input1));
         System.out.println(getSolutionTwo(input2));
-        System.out.println(getSolutionTwo(input3));
     }
 
     public static int getSolutionTwo(List<String> input) {

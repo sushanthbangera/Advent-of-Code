@@ -67,16 +67,13 @@ public class GiantSquid {
 
     protected static String inputPath1 = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\Day4\\input1";
     protected static String inputPath2 = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\Day4\\input2";
-    protected static String inputPath3 = "C:\\Users\\suba0521\\Downloads\\input.txt";
 
     public static void main(String[] args) {
         List<String> input1 = FileUtils.readInputFile(inputPath1);
         List<String> input2 = FileUtils.readInputFile(inputPath2);
-        List<String> input3 = FileUtils.readInputFile(inputPath3);
 
         System.out.println(getSolutionOne(input1));
         System.out.println(getSolutionOne(input2));
-        System.out.println(getSolutionOne(input3));
     }
 
     public static int getSolutionOne(List<String> input) {
