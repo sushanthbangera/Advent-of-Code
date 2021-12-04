@@ -36,7 +36,6 @@ public class PowerConsumptionFinder {
                     one[i]++;
                 }
             }
-
         }
 
         StringBuilder s = new StringBuilder();
@@ -82,7 +81,6 @@ public class PowerConsumptionFinder {
             char leastSigBit = mostSigBit == '1' ? '0' : '1';
             final int pos = i;
             rem = cur.stream().filter(e -> e.charAt(pos) == leastSigBit).collect(Collectors.toList());
-            System.out.println(rem);
             cur.clear();
             cur.addAll(rem);
         }
@@ -92,15 +90,14 @@ public class PowerConsumptionFinder {
 
     private static char getMostRepeatingBit(List<String> input, int position) {
         int zero = 0;
-        int one = 0;
+        int one;
 
         for (String in : input) {
             if (in.charAt(position) == '0') {
                 zero++;
-            } else {
-                one++;
             }
         }
+        one = input.size() - zero;
         return one >= zero ? '1' : '0';
     }
 }
