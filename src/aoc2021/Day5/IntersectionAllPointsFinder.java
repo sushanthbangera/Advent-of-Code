@@ -18,9 +18,9 @@ public class IntersectionAllPointsFinder extends IntersectionPointFinder {
 
     public static int getTotalIntersectingPoints(List<String> input) {
         for (String in : input) {
-            int coordinates[] = getCoordinates(in);
-            int x1 = coordinates[0], y1 = coordinates[1];
-            int x2 = coordinates[2], y2 = coordinates[3];
+            int coordinates[][] = getCoordinates(in);
+            int x1 = coordinates[0][0], y1 = coordinates[0][1];
+            int x2 = coordinates[1][0], y2 = coordinates[1][1];
 
             if (x1 == x2) {
                 plotHorizontal(x1, y1, y2);
