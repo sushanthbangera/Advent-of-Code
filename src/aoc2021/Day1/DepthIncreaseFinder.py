@@ -1,5 +1,8 @@
 from aoc2021.utils import file_utils
 
+input_path1 = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\Day1\\input1"
+input_path2 = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\Day1\\input2"
+
 
 def get_increased_depth_count(input):
     result = 0
@@ -28,16 +31,10 @@ def get_increased_window_depth_count(input):
 
 
 if __name__ == '__main__':
-    input_path = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\Day1\\input1";
-    input = file_utils.read_file(input_path)
-    response = get_increased_depth_count(input)
-    print(response)
-    response = get_increased_window_depth_count(input)
-    print(response)
+    file_data = file_utils.read_file(input_path1)
+    print(get_increased_depth_count(file_data))
+    print(get_increased_window_depth_count(file_data))
 
-    input_path = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\Day1\\input2";
-    input = file_utils.read_file(input_path)
-    response = get_increased_depth_count(input)
-    print(response)
-    response = get_increased_window_depth_count(input)
-    print(response)
+    file_data = file_utils.read_file(input_path2)
+    print(get_increased_depth_count(file_data))
+    print(get_increased_window_depth_count(file_data))
