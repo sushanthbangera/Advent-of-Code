@@ -12,11 +12,11 @@ public class SevenSegmentDisplayCounter extends SevenSegmentSearch {
         List<String> input1 = FileUtils.readInputFile(inputPath1);
         List<String> input2 = FileUtils.readInputFile(inputPath2);
 
-        System.out.println(getSolution(input1));
-        System.out.println(getSolution(input2));
+        System.out.println(getOutputDisplaySum(input1));
+        System.out.println(getOutputDisplaySum(input2));
     }
 
-    private static int getSolution(List<String> input) {
+    private static int getOutputDisplaySum(List<String> input) {
         int result = 0;
         for (String in : input) {
             String ch[] = in.split("\\s+");
