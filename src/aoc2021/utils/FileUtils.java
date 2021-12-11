@@ -9,6 +9,8 @@ import java.util.List;
 
 public class FileUtils {
 
+    public static final String BASE_PATH = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\";
+
     public static List<String> readInputFile(final String fileName) {
         List<String> lines = Collections.emptyList();
         try {

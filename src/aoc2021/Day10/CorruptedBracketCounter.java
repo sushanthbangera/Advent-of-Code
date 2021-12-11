@@ -1,13 +1,13 @@
 package aoc2021.Day10;
 
-import aoc2020.utils.FileUtils;
+import aoc2021.utils.FileUtils;
 
 import java.util.*;
 
 public class CorruptedBracketCounter {
 
-    protected static String inputPath1 = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\Day10\\input1";
-    protected static String inputPath2 = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\Day10\\input2";
+    protected static String inputPath1 = FileUtils.BASE_PATH + "Day10\\input1";
+    protected static String inputPath2 = FileUtils.BASE_PATH + "Day10\\input2";
 
     protected static Set<Character> openBrackets = new HashSet<>(Arrays.asList(new Character[]{'{', '(', '[', '<'}));
     protected static Map<Character, Character> closedBrackets = new HashMap<Character, Character>() {{

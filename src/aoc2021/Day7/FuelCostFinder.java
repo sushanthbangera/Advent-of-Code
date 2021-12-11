@@ -1,6 +1,6 @@
 package aoc2021.Day7;
 
-import aoc2020.utils.FileUtils;
+import aoc2021.utils.FileUtils;
 import aoc2021.utils.NumberUtils;
 
 import java.util.Collections;
@@ -8,8 +8,8 @@ import java.util.List;
 
 public class FuelCostFinder {
 
-    protected static String inputPath1 = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\Day7\\input1";
-    protected static String inputPath2 = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\Day7\\input2";
+    protected static String inputPath1 = FileUtils.BASE_PATH + "Day7\\input1";
+    protected static String inputPath2 = FileUtils.BASE_PATH + "Day7\\input2";
 
     public static void main(String[] args) {
         List<String> input1 = FileUtils.readInputFile(inputPath1);

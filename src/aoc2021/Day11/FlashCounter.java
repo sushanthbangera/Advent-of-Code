@@ -1,13 +1,13 @@
 package aoc2021.Day11;
 
-import aoc2020.utils.FileUtils;
+import aoc2021.utils.FileUtils;
 
 import java.util.List;
 
 public class FlashCounter {
 
-    protected static String inputPath1 = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\Day11\\input1";
-    protected static String inputPath2 = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\Day11\\input2";
+    protected static String inputPath1 = FileUtils.BASE_PATH + "Day11\\input1";
+    protected static String inputPath2 = FileUtils.BASE_PATH + "Day11\\input2";
 
     private static int[][] moves = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}, {1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
     protected static int matrix[][] = new int[10][10];

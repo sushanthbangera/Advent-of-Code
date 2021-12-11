@@ -1,6 +1,6 @@
 package aoc2021.Day3;
 
-import aoc2020.utils.FileUtils;
+import aoc2021.utils.FileUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,8 +8,8 @@ import java.util.stream.Collectors;
 
 public class PowerConsumptionFinder {
 
-    private static String inputPath1 = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\Day3\\input1";
-    private static String inputPath2 = "C:\\MyDrive\\Study\\My_Github_Repo\\Advent-of-Code\\src\\aoc2021\\Day3\\input2";
+    private static String inputPath1 = FileUtils.BASE_PATH + "Day3\\input1";
+    private static String inputPath2 = FileUtils.BASE_PATH + "Day3\\input2";
 
     public static void main(String[] args) {
         List<String> input = FileUtils.readInputFile(inputPath1);
