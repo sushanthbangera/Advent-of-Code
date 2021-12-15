@@ -1,4 +1,4 @@
-package aoc2020.Day5;
+package aoc2020.Day05;
 
 import aoc2020.utils.FileUtils;
 
